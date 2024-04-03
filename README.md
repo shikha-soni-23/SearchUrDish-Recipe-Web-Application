@@ -24,5 +24,5 @@ SearchUrDish is a web application that allows users to find recipes based on ava
 
 ## Links
 
-- LIVE SITE URL : [Click here]()
+- LIVE SITE URL : [Click here](https://searchurdish.netlify.app/)
 - TheMealDB API : [https://www.themealdb.com/api.php](https://www.themealdb.com/api.php)
