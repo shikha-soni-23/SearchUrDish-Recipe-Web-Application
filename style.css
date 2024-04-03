@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* body{
+    font-family: "Fredericka the Great", 'Poppins';
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-blue);
+}
+
+:root{
+    --dark-blue: hsl(214, 91%, 9%);
+    --dark-blue2: hsl(215, 79%, 15%);
+    --light-blue: hsl(210, 95%, 56%);
+    --blue: hsl(231, 97%, 59%); 
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+
+.food-search{
+    background-image: url(./bkg-top.jpg);
+    width: 100%;
+    height: 460px;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.food-search h2{
+    font-family: "Fredericka the Great", sans-serif;
+    font-size: 60px;
+    padding-top: 65px;
+    padding-bottom: 30px;
+}
+
+.food-search blockquote{
+    font-size: 18px;
+    font-weight: 500;
+    word-spacing: 5px;
+    color: #fff;
+}
+
+.food-search cite{
+    font-size: 15px;
+}
+
+/* same */
+
+.food-search-box{
+    margin: 50px 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-content,
+.search-btn{
+    width: 100%;
+}
+
+.search-content{
+    padding: 0 24px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue);
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+}
+
+.search-content::placeholder{
+    color: var(--light-blue);
+}
+
+.search-btn{
+    width: 65px;
+    height: 55px;
+    font-size: 26px;
+    background-color: var(--light-blue);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.search-btn:hover{
+    background-color: var(--dark-blue);
+} 
+
+/* part2 */
+
+.food-result {
+    padding-bottom: 50px; /* Adjust the value as needed */
+}
+
+
+.food-result h2{
+    margin: 45px 0;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+}
+
+
+/* part-2 */
+
+
+#food{
+    margin: 32px 105px;
+}
+
+.food-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -5px rgba(255, 255, 255, 0.75);
+    margin: 10px 0; /* Adjusted margin */
+    width: 300px; /* Adjusted width */
+
+}
+
+.food-img img {
+    width: 100%;
+    height: 100%; /* Ensures the image fills its container */
+    object-fit: cover; 
+    /* Ensures the image maintains its aspect ratio */
+    display: block;
+}
+
+.food-name {
+    padding: 15px 12px; /* Adjusted padding */
+    text-align: center;
+    font-size: 15px;
+}
+
+.recipe-btn {
+    text-decoration: none;
+    color: #fff;
+    background: var(--blue);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 0; /* Adjusted padding */
+    display: block;
+    width: 150px; /* Adjusted width */
+    margin: 13px auto; /* Adjusted margin */
+    border-radius: 25px; /* Adjusted border radius */
+    transition: all 0.2s linear;
+}
+
+.recipe-btn:hover {
+    background: var(--light-blue);
+}
+
+/* food details */
+.food-details{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: var(--dark-blue2);
+    border-radius: 17px;
+    width: 90%;
+    height: 90%;
+    overflow: scroll;
+    display: none;
+    padding: 28px 0;
+
+}
+
+.food-details::-webkit-scrollbar{
+    width: 10px;
+}
+.food-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 28px;
+}
+
+/* for js */
+.showRecipe{
+    display: block;
+}
+
+.food-details-content{
+    margin: 28px;
+}
+
+.food-details-content p:not(.recipe-category){
+    padding: 15px 0;
+}
+
+.recipe-close-btn{
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+}
+
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--light-blue);
+    display: inline-block;
+    padding: 5px 8px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+}
+
+.recipe-instruction{
+    padding: 15px;
+}
+
+.recipe-food-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.recipe-link{
+    margin: 18px 0;
+}
+
+.recipe-link a{
+    color: var(--light-blue);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s linear;
+}
+
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+
+.notFound{
+    grid-template-columns: 1fr !important;
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px){
+    .food-search-box{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #food{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+    .food-item{
+        margin: 0;
+    }
+    .food-details{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #food{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
